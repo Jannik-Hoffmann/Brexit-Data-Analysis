@@ -2,7 +2,7 @@
 # Brexit Vote Analysis: Immigration Attitudes and Authoritarianism
 
 
-For the full report, see the interactive quarto page ![Finished Report.html]
+For the full report, see the interactive quarto page [Finished Report.html]
 
 ## Overview
 
