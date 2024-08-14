@@ -2,7 +2,7 @@
 # Brexit Vote Analysis: Immigration Attitudes and Authoritarianism
 
 
-For the full report, see the interactive quarto page ["Finished Report.html"]
+[Brexit Vote Analysis Report](https://htmlpreview.github.io/?https://github.com/Jannik-Hoffmann/Brexit-Data-Analysis/blob/main/FullReport.html)
 
 ## Overview
 
