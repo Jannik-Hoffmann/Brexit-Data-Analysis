@@ -1,0 +1,1127 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.553">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Jannik Marian Hoffmann">
+<meta name="dcterms.date" content="2024-08-14">
+
+<title>The effect of Anti-immigration attitudes on voting for Leave in the 2016 EU Referendum</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="Finished Report_files/libs/clipboard/clipboard.min.js"></script>
+<script src="Finished Report_files/libs/quarto-html/quarto.js"></script>
+<script src="Finished Report_files/libs/quarto-html/popper.min.js"></script>
+<script src="Finished Report_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="Finished Report_files/libs/quarto-html/anchor.min.js"></script>
+<link href="Finished Report_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="Finished Report_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="Finished Report_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="Finished Report_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="Finished Report_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body>
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#shortened-theoretical-background" id="toc-shortened-theoretical-background" class="nav-link" data-scroll-target="#shortened-theoretical-background">Shortened Theoretical Background</a></li>
+  <li><a href="#data-and-methodology" id="toc-data-and-methodology" class="nav-link" data-scroll-target="#data-and-methodology">Data and Methodology</a>
+  <ul class="collapse">
+  <li><a href="#data-source-and-sample" id="toc-data-source-and-sample" class="nav-link" data-scroll-target="#data-source-and-sample">Data Source and Sample</a>
+  <ul class="collapse">
+  <li><a href="#dependent-variable" id="toc-dependent-variable" class="nav-link" data-scroll-target="#dependent-variable">Dependent Variable</a></li>
+  <li><a href="#main-independent-variables" id="toc-main-independent-variables" class="nav-link" data-scroll-target="#main-independent-variables">Main Independent Variables</a></li>
+  <li><a href="#additional-variables" id="toc-additional-variables" class="nav-link" data-scroll-target="#additional-variables">Additional Variables</a></li>
+  <li><a href="#control-variables" id="toc-control-variables" class="nav-link" data-scroll-target="#control-variables">Control Variables</a></li>
+  </ul></li>
+  <li><a href="#model-specification" id="toc-model-specification" class="nav-link" data-scroll-target="#model-specification">Model Specification</a></li>
+  <li><a href="#descriptive-statistics" id="toc-descriptive-statistics" class="nav-link" data-scroll-target="#descriptive-statistics">Descriptive Statistics</a></li>
+  </ul></li>
+  <li><a href="#results-and-analysis" id="toc-results-and-analysis" class="nav-link" data-scroll-target="#results-and-analysis">Results and Analysis</a>
+  <ul class="collapse">
+  <li><a href="#regression-results" id="toc-regression-results" class="nav-link" data-scroll-target="#regression-results">Regression Results</a></li>
+  <li><a href="#predicted-probabilities-and-first-differences" id="toc-predicted-probabilities-and-first-differences" class="nav-link" data-scroll-target="#predicted-probabilities-and-first-differences">Predicted Probabilities and First Differences</a></li>
+  <li><a href="#model-evaluation" id="toc-model-evaluation" class="nav-link" data-scroll-target="#model-evaluation">Model Evaluation</a></li>
+  </ul></li>
+  <li><a href="#discussion" id="toc-discussion" class="nav-link" data-scroll-target="#discussion">Discussion</a></li>
+  <li><a href="#limitations-and-future-research" id="toc-limitations-and-future-research" class="nav-link" data-scroll-target="#limitations-and-future-research">Limitations and Future Research</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  </ul>
+</nav>
+</div>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">The effect of Anti-immigration attitudes on voting for Leave in the 2016 EU Referendum</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Jannik Marian Hoffmann </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">August 14, 2024</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
+<p>The 2016 United Kingdom European Union membership referendum, commonly known as the Brexit referendum, marked a pivotal moment in British and European politics. This study aims to investigate the determinants of the Brexit vote, focusing specifically on the relationship between attitudes towards immigration, levels of authoritarianism, and the likelihood of voting to leave the European Union. Our primary hypothesis is that anti-immigration attitudes predict a higher likelihood of voting for Brexit, with this effect being moderated by individuals’ levels of authoritarianism.</p>
+</section>
+<section id="shortened-theoretical-background" class="level1">
+<h1>Shortened Theoretical Background</h1>
+<p>The Brexit vote has been the subject of extensive research, with scholars examining various factors that influenced the referendum outcome. Previous studies have highlighted the importance of immigration concerns <span class="citation" data-cites="goodwin_milazzo_2017">(<a href="#ref-goodwin_milazzo_2017" role="doc-biblioref">Goodwin and Milazzo 2017</a>)</span>, economic grievances <span class="citation" data-cites="colantone_stanig_2018">(<a href="#ref-colantone_stanig_2018" role="doc-biblioref">Colantone and Stanig 2018</a>)</span>, and cultural anxiety <span class="citation" data-cites="norris_inglehart_2019">(<a href="#ref-norris_inglehart_2019" role="doc-biblioref">Norris and Inglehart 2019</a>)</span> in shaping voting behavior.</p>
+<p>Our study builds on this literature by examining the interplay between immigration attitudes and authoritarianism. Authoritarianism, characterized by a preference for social order and conformity <span class="citation" data-cites="altemeyer_1981">(<a href="#ref-altemeyer_1981" role="doc-biblioref">Altemeyer 1981</a>)</span>, has been linked to support for populist and nationalist movements <span class="citation" data-cites="stenner_2005">(<a href="#ref-stenner_2005" role="doc-biblioref">Stenner 2005</a>)</span>. We posit that individuals with higher levels of authoritarianism may be more susceptible to anti-immigration rhetoric, thus amplifying the effect of immigration attitudes on Brexit support.</p>
+</section>
+<section id="data-and-methodology" class="level1">
+<h1>Data and Methodology</h1>
+<section id="data-source-and-sample" class="level2">
+<h2 class="anchored" data-anchor-id="data-source-and-sample">Data Source and Sample</h2>
+<p>We use a subsample of 3000 respondents from the 15th wave of the British Election Study. This dataset provides our variables of interest.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Show the code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"raw-data/bes15.csv"</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Recode immigSelf variable to reverse its scale</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>immigSelf <span class="ot">&lt;-</span> <span class="fu">recode</span>(data<span class="sc">$</span>immigSelf, <span class="st">`</span><span class="at">0</span><span class="st">`</span><span class="ot">=</span><span class="dv">10</span>L, <span class="st">`</span><span class="at">1</span><span class="st">`</span><span class="ot">=</span><span class="dv">9</span>L, <span class="st">`</span><span class="at">2</span><span class="st">`</span><span class="ot">=</span><span class="dv">8</span>L, <span class="st">`</span><span class="at">3</span><span class="st">`</span><span class="ot">=</span><span class="dv">7</span>L, <span class="st">`</span><span class="at">4</span><span class="st">`</span><span class="ot">=</span><span class="dv">6</span>L, <span class="st">`</span><span class="at">5</span><span class="st">`</span><span class="ot">=</span><span class="dv">5</span>L, <span class="st">`</span><span class="at">6</span><span class="st">`</span><span class="ot">=</span><span class="dv">4</span>L, <span class="st">`</span><span class="at">7</span><span class="st">`</span><span class="ot">=</span><span class="dv">3</span>L, <span class="st">`</span><span class="at">8</span><span class="st">`</span><span class="ot">=</span><span class="dv">2</span>L, <span class="st">`</span><span class="at">9</span><span class="st">`</span><span class="ot">=</span><span class="dv">1</span>L, <span class="st">`</span><span class="at">10</span><span class="st">`</span><span class="ot">=</span><span class="dv">0</span>L)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Prepare dataset for later substantive interpretation</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate mean immigration attitude for Farage supporters</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>faragesupporters <span class="ot">&lt;-</span> <span class="fu">subset</span>(data, likeFarage <span class="sc">&gt;=</span> <span class="dv">8</span>) </span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(faragesupporters<span class="sc">$</span>immig_att, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 8.38417</code></pre>
+</div>
+<details class="code-fold">
+<summary>Show the code</summary>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate mean immigration attitude for Corbyn supporters</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>corbynsupporters <span class="ot">&lt;-</span> <span class="fu">subset</span>(data, likeCorbyn <span class="sc">&gt;=</span> <span class="dv">8</span>)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(corbynsupporters<span class="sc">$</span>immig_att, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 3.236162</code></pre>
+</div>
+<details class="code-fold">
+<summary>Show the code</summary>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Select relevant variables for analysis</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">subset</span>(data, <span class="at">select =</span> <span class="fu">c</span>(p_eurefvote, immig_att, immigSelf, al_scaleW14, eth_wBrit, age, p_gross_household))</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Create grouped household income variable</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>gross_household_grouped <span class="ot">&lt;-</span> <span class="fu">cut</span>(data<span class="sc">$</span>p_gross_household,</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>                                    <span class="at">breaks=</span><span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">4</span>, <span class="dv">8</span>, <span class="dv">15</span>),  <span class="co"># Define break points</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>                                    <span class="at">labels=</span><span class="fu">c</span>(<span class="st">'Low'</span>, <span class="st">"Mid"</span>, <span class="st">"High"</span>))  <span class="co"># Define labels for groups</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">colnames</span>(data))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "p_eurefvote"             "immig_att"              
+[3] "immigSelf"               "al_scaleW14"            
+[5] "eth_wBrit"               "age"                    
+[7] "p_gross_household"       "gross_household_grouped"</code></pre>
+</div>
+</div>
+<section id="dependent-variable" class="level3">
+<h3 class="anchored" data-anchor-id="dependent-variable">Dependent Variable</h3>
+<p>Our dependent variable is the respondent’s vote in the EU referendum, coded as 1 for “Leave” and 0 for “Remain”.</p>
+</section>
+<section id="main-independent-variables" class="level3">
+<h3 class="anchored" data-anchor-id="main-independent-variables">Main Independent Variables</h3>
+<ol type="1">
+<li><p><strong>Attitudes towards immigration</strong>: Measured on an ordinal scale from 0 (very positive) to 12 (very negative). Despite the general inappropriateness of treating ordinal variables as continuous in regression models, we treat this variable as continuous. This decision is based on the range of 10 or more categories, which suggests that differences between categories are likely small enough to justify this approach. Grouping the levels (e.g., into positive, neutral, and negative views) would result in lost information.</p></li>
+<li><p><strong>Authoritarianism</strong>: Measured on a Likert scale from 0 (low authoritarianism) in 0.5-point increments to 10 (high authoritarianism). This is also treated as a continuous variable based on the same assumption as the immigration attitude variable.</p></li>
+</ol>
+</section>
+<section id="additional-variables" class="level3">
+<h3 class="anchored" data-anchor-id="additional-variables">Additional Variables</h3>
+<p>The dataset includes items capturing respondents’ attitudes towards certain British politicians (Nigel Farage and Jeremy Corbyn). While not included in our model, these are useful for substantive interpretation and provide a basis for simulated scenarios comparing mean immigration attitudes of Corbyn and Farage supporters.</p>
+</section>
+<section id="control-variables" class="level3">
+<h3 class="anchored" data-anchor-id="control-variables">Control Variables</h3>
+<p>We include several control variables that we assume influence both the independent and dependent variables:</p>
+<ol type="1">
+<li><strong>Age</strong>: We assume older voters are both less favorable towards immigration and more likely to vote for Leave.</li>
+<li><strong>Household income</strong>: We hypothesize that higher household incomes may be associated with a desire to maintain EU economic benefits, while lower incomes may correlate with desires to limit immigration and prioritize jobs for native-born citizens.</li>
+<li><strong>Ethnicity</strong>: A dummy variable for being ethnically White British, assumed to influence both attitudes towards immigration and likelihood of voting Leave.</li>
+</ol>
+</section>
+</section>
+<section id="model-specification" class="level2">
+<h2 class="anchored" data-anchor-id="model-specification">Model Specification</h2>
+<p>Given the dichotomous nature of our dependent variable, we employ a binomial model. Specifically, we use logistic regression. The stochastic component is given by:</p>
+<p><span class="math inline">\(Y_i \sim \text{Bernoulli}(\pi_i)\)</span></p>
+<p>We estimate three models:</p>
+<ol type="1">
+<li>Base model: Brexit vote regressed on attitudes towards immigration and authoritarianism.</li>
+<li>Interaction model: Adds an interaction term between the two independent variables.</li>
+<li>Full model: Includes control variables (age, household income, ethnicity).</li>
+</ol>
+<p>The systematic component for the full model is:</p>
+<p><span class="math inline">\(\eta_i = X_i\beta = \beta_0 + \beta_1 \text{Immigration Attitude} + \beta_2 \text{Authoritarianism} + \beta_3 \text{Ethnically White British} + \beta_4 \text{Age} + \beta_5 \text{Gross Household Income Grouped} + \beta_6 (\text{Immigration Attitude} * \text{Authoritarianism})\)</span></p>
+<p>To evaluate the results, we use simulation to calculate and visualize quantities of interest, accounting for estimate uncertainty using the framework described by <span class="citation" data-cites="king_tomz_wittenberg_2000">King, Tomz, and Wittenberg (<a href="#ref-king_tomz_wittenberg_2000" role="doc-biblioref">2000</a>)</span>. For robustness, we also use an alternative specification for anti-immigration attitudes.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Show the code</summary>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">"data/prepared_data.RData"</span>)  <span class="co"># Load prepared data</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Fit logistic regression models</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>model1 <span class="ot">&lt;-</span> <span class="fu">glm</span>(p_eurefvote <span class="sc">~</span> immig_att <span class="sc">+</span> al_scaleW14, <span class="at">data =</span> data, <span class="at">family =</span> <span class="fu">binomial</span>(<span class="at">link =</span> logit))</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>model2 <span class="ot">&lt;-</span> <span class="fu">glm</span>(p_eurefvote <span class="sc">~</span> immig_att <span class="sc">+</span> al_scaleW14 <span class="sc">+</span> immig_att<span class="sc">*</span>al_scaleW14, <span class="at">data =</span> data, <span class="at">family =</span> <span class="fu">binomial</span>(<span class="at">link =</span> logit))</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>model3 <span class="ot">&lt;-</span> <span class="fu">glm</span>(p_eurefvote <span class="sc">~</span> immig_att <span class="sc">+</span> al_scaleW14 <span class="sc">+</span> eth_wBrit <span class="sc">+</span> age <span class="sc">+</span> gross_household_grouped <span class="sc">+</span> immig_att<span class="sc">*</span>al_scaleW14, <span class="at">data =</span> data, <span class="at">family =</span> <span class="fu">binomial</span>(<span class="at">link =</span> logit))</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>model4 <span class="ot">&lt;-</span> <span class="fu">glm</span>(p_eurefvote <span class="sc">~</span> immigSelf <span class="sc">+</span> al_scaleW14 <span class="sc">+</span> eth_wBrit <span class="sc">+</span> age <span class="sc">+</span> gross_household_grouped <span class="sc">+</span> immigSelf<span class="sc">*</span>al_scaleW14, <span class="at">data =</span> data, <span class="at">family =</span> <span class="fu">binomial</span>(<span class="at">link =</span> logit))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+<section id="descriptive-statistics" class="level2">
+<h2 class="anchored" data-anchor-id="descriptive-statistics">Descriptive Statistics</h2>
+<div class="cell">
+<details class="code-fold">
+<summary>Show the code</summary>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(stargazer)</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Capture the LaTeX output - This is the code to generate the html table below</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="co"># stargazer(data, </span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="co">#             covariate.labels = c("Leave Vote in EU Ref", "Attitude towards Immigration", </span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="co">#                                  "Preferred level of Migration", "Authoritarianism Scale", </span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="co">#                                  "Ethnically White British", "Age", "Gross Household Income"),</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a><span class="co">#             summary.stat = c("n", "mean", "sd", "min", "p25", "median", "p75", "max"),</span></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a><span class="co">#             type = "html",</span></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a><span class="co">#             title = "Descriptive Statistics",</span></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a><span class="co">#             float = FALSE,</span></span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a><span class="co">#             table.placement = "H",</span></span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a><span class="co">#             header = FALSE)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div>
+<table data-quarto-postprocess="true" class="table">
+<tbody>
+<tr class="odd">
+<td colspan="9" style="border-bottom: 1px solid black"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Statistic</td>
+<td>N</td>
+<td>Mean</td>
+<td>St. Dev.</td>
+<td>Min</td>
+<td>Pctl(25)</td>
+<td>Median</td>
+<td>Pctl(75)</td>
+<td>Max</td>
+</tr>
+<tr class="odd">
+<td colspan="9" style="border-bottom: 1px solid black"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Leave Vote in EU Ref</td>
+<td>2,982</td>
+<td>0.507</td>
+<td>0.500</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Attitude towards Immigration</td>
+<td>2,985</td>
+<td>5.012</td>
+<td>3.509</td>
+<td>0</td>
+<td>2</td>
+<td>5</td>
+<td>8</td>
+<td>12</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Preferred level of Migration</td>
+<td>2,985</td>
+<td>6.193</td>
+<td>2.678</td>
+<td>0</td>
+<td>5</td>
+<td>6</td>
+<td>8</td>
+<td>10</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Authoritarianism Scale</td>
+<td>2,982</td>
+<td>6.343</td>
+<td>2.250</td>
+<td>0.000</td>
+<td>5.000</td>
+<td>6.500</td>
+<td>8.000</td>
+<td>10.000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Ethnically White British</td>
+<td>2,983</td>
+<td>0.937</td>
+<td>0.244</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Age</td>
+<td>2,985</td>
+<td>55.361</td>
+<td>14.582</td>
+<td>20</td>
+<td>45</td>
+<td>58</td>
+<td>67</td>
+<td>94</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Gross Household Income</td>
+<td>2,990</td>
+<td>7.085</td>
+<td>3.508</td>
+<td>1</td>
+<td>4</td>
+<td>7</td>
+<td>10</td>
+<td>15</td>
+</tr>
+<tr class="odd">
+<td colspan="9" style="border-bottom: 1px solid black"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>To begin with, all relevant variables and their descriptive statistics are presented above in Table 1. As can be seen by the mean of the dichotomous variable Brexit Vote, 50.7% of respondents voted for the Brexit while 49.3% voted against which is very close to the official results of the Brexit referendum with 51.9% of voters for “leave”. Both the variable “Attitude towards Immigration” and “Desired immigration level” are skewed towards the right. Authoritarianism is also skewed to the left. From the 25% quantile, median and 75% quantile it is evident that age of the respondents is highly skewed to the right with people under 45 making up only 25% of the sample and 50 percent of the sample being over 58. 93.7% of respondents are of White British ethnicity. For each variable, under 20 cases are dropped because of missing values.</p>
+</section>
+</section>
+<section id="results-and-analysis" class="level1">
+<h1>Results and Analysis</h1>
+<section id="regression-results" class="level2">
+<h2 class="anchored" data-anchor-id="regression-results">Regression Results</h2>
+<div class="cell">
+<details class="code-fold">
+<summary>Show the code</summary>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate regression results table using stargazer</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">stargazer</span>(model1, model2, model3, model4,</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>          <span class="at">dep.var.labels =</span> <span class="fu">c</span>(<span class="st">"Leave vote in EU-Referendum"</span>),</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>          <span class="at">covariate.labels =</span> <span class="fu">c</span>(<span class="st">"Attitude towards Immigration"</span>, <span class="st">"Preferred level of Migration"</span>, </span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"Authoritarianism Scale"</span>, <span class="st">"Ethnically White British"</span>, <span class="st">"Age"</span>, </span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"Medium Household Income(25</span><span class="sc">\\</span><span class="st">% to 75</span><span class="sc">\\</span><span class="st">% quantile)"</span>, </span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"High Household Income (&gt;75</span><span class="sc">\\</span><span class="st">% quantile)"</span>, </span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"Attitude towards Immigration*Authoritarianism Scale"</span>, </span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"Preferred level of Migration*Authoritarianism Scale"</span>),</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>          <span class="at">type =</span> <span class="st">"text"</span>,</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>          <span class="at">title =</span> <span class="st">"Logit Analyses of Determinants of Brexit Vote"</span>,</span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>          <span class="at">float =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>          <span class="at">table.placement =</span> <span class="st">"H"</span>,</span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>          <span class="at">header =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Logit Analyses of Determinants of Brexit Vote
+===============================================================================================
+                                                                Dependent variable:            
+                                                    -------------------------------------------
+                                                            Leave vote in EU-Referendum        
+                                                       (1)        (2)        (3)        (4)    
+-----------------------------------------------------------------------------------------------
+Attitude towards Immigration                         0.369***   0.724***   0.725***            
+                                                     (0.018)    (0.071)    (0.073)             
+                                                                                               
+Preferred level of Migration                                                          0.846*** 
+                                                                                      (0.093)  
+                                                                                               
+Authoritarianism Scale                               0.315***   0.538***   0.537***   0.626*** 
+                                                     (0.026)    (0.051)    (0.053)    (0.079)  
+                                                                                               
+Ethnically White British                                                   0.547***   0.672*** 
+                                                                           (0.208)    (0.207)  
+                                                                                               
+Age                                                                        0.008**     0.007*  
+                                                                           (0.004)    (0.004)  
+                                                                                               
+Medium Household Income(25% to 75% quantile)                                -0.134     -0.061  
+                                                                           (0.121)    (0.120)  
+                                                                                               
+High Household Income (&gt;75% quantile)                                     -0.583***  -0.559*** 
+                                                                           (0.129)    (0.127)  
+                                                                                               
+Attitude towards Immigration*Authoritarianism Scale            -0.051***  -0.052***            
+                                                                (0.010)    (0.010)             
+                                                                                               
+Preferred level of Migration*Authoritarianism Scale                                  -0.056*** 
+                                                                                      (0.013)  
+                                                                                               
+Constant                                            -3.806***  -5.288***  -5.941***  -7.688*** 
+                                                     (0.176)    (0.352)    (0.461)    (0.626)  
+                                                                                               
+-----------------------------------------------------------------------------------------------
+Observations                                          2,949      2,949      2,864      2,864   
+Log Likelihood                                      -1,391.723 -1,376.487 -1,307.132 -1,337.936
+Akaike Inf. Crit.                                   2,789.446  2,760.973  2,630.264  2,691.872 
+===============================================================================================
+Note:                                                               *p&lt;0.1; **p&lt;0.05; ***p&lt;0.01</code></pre>
+</div>
+</div>
+<p>The results of the regression analysis are shown above in Table 2. In the first parsimonious model both attitudes towards immigration and authoritarianism have a positive effect on the probability of voting for “Leave”, both being significant at the 1% level. They remain positive and significant at this level across all estimated models. In the second model the direction of association for the main independent variables stays the same, with all coefficients still being significant on the 1% level. The interaction effect is negative and significant at the 1% level, indicating that the effect of attitudes towards immigration on voting for “Leave” decreases as authoritarianism increases. In the third model, I include the control variables age, grouped gross household income and the dummy variable for being ethnically white Britain.</p>
+<p>Age is positive and significant at the 5% level, indicating that with higher age, the probability of voting for Brexit increases. While the effect of medium levels of household income is not significant, high levels of household income have a negative effect on the probability of voting for Brexit, being significant at the 1% level. The dummy variable White British ethnicity has a positive effect, significant at the 1% level, indicating that being White British increases the probability of voting for Brexit. Lastly, model 4 shows that these direction, approximate size and significance of the results are not sensitive to a slightly different concept specification, using the variable “Desired immigration level” instead of “Attitude towards Immigration”. Both the log-likelihood and AIC of the third model is the smallest one, therefore Model 3 is the one that fits the data best compared to the other three.</p>
+</section>
+<section id="predicted-probabilities-and-first-differences" class="level2">
+<h2 class="anchored" data-anchor-id="predicted-probabilities-and-first-differences">Predicted Probabilities and First Differences</h2>
+<div class="cell">
+<details class="code-fold">
+<summary>Show the code</summary>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Instead of using a package like ggeffects I decided to calculate the statistics myself.</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Extract coefficients and variance-covariance matrix from model3</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>beta_hat_4 <span class="ot">&lt;-</span> <span class="fu">coef</span>(model3)</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>V_hat_4 <span class="ot">&lt;-</span> <span class="fu">vcov</span>(model3)</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Set number of simulations</span></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>nsim <span class="ot">&lt;-</span> <span class="dv">1000</span></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Draw from multivariate normal distribution</span></span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>S_4 <span class="ot">&lt;-</span> <span class="fu">mvrnorm</span>(<span class="at">n =</span> nsim, <span class="at">mu =</span> beta_hat_4, <span class="at">Sigma =</span> V_hat_4)</span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Set up scenarios for simulation</span></span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>auth_values <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="fu">min</span>(data<span class="sc">$</span>al_scaleW14, <span class="at">na.rm =</span> <span class="cn">TRUE</span>), <span class="fu">max</span>(data<span class="sc">$</span>al_scaleW14, <span class="at">na.rm =</span> <span class="cn">TRUE</span>), <span class="at">length.out =</span> <span class="dv">100</span>)</span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a>Pro_Immig <span class="ot">&lt;-</span> <span class="fu">quantile</span>(data<span class="sc">$</span>immig_att, <span class="at">probs =</span> <span class="fl">0.25</span>, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a>Anti_immig <span class="ot">&lt;-</span> <span class="fu">quantile</span>(data<span class="sc">$</span>immig_att, <span class="at">probs =</span> <span class="fl">0.75</span>, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Create scenarios</span></span>
+<span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a>scenario_low <span class="ot">&lt;-</span> <span class="fu">cbind</span>(<span class="dv">1</span>, Pro_Immig, auth_values, <span class="fu">mean</span>(data<span class="sc">$</span>eth_wBrit, <span class="at">na.rm =</span> <span class="cn">TRUE</span>), </span>
+<span id="cb11-19"><a href="#cb11-19" aria-hidden="true" tabindex="-1"></a>                      <span class="fu">mean</span>(data<span class="sc">$</span>age, <span class="at">na.rm =</span> <span class="cn">TRUE</span>), <span class="dv">1</span>, <span class="dv">0</span>, Pro_Immig<span class="sc">*</span>auth_values)</span>
+<span id="cb11-20"><a href="#cb11-20" aria-hidden="true" tabindex="-1"></a>scenario_high <span class="ot">&lt;-</span> <span class="fu">cbind</span>(<span class="dv">1</span>, Anti_immig, auth_values, <span class="fu">mean</span>(data<span class="sc">$</span>eth_wBrit, <span class="at">na.rm =</span> <span class="cn">TRUE</span>), </span>
+<span id="cb11-21"><a href="#cb11-21" aria-hidden="true" tabindex="-1"></a>                       <span class="fu">mean</span>(data<span class="sc">$</span>age, <span class="at">na.rm =</span> <span class="cn">TRUE</span>), <span class="dv">1</span>, <span class="dv">0</span>, Anti_immig<span class="sc">*</span>auth_values)</span>
+<span id="cb11-22"><a href="#cb11-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-23"><a href="#cb11-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate expected values</span></span>
+<span id="cb11-24"><a href="#cb11-24" aria-hidden="true" tabindex="-1"></a>Xbeta_low <span class="ot">&lt;-</span> S_4 <span class="sc">%*%</span> <span class="fu">t</span>(scenario_low)</span>
+<span id="cb11-25"><a href="#cb11-25" aria-hidden="true" tabindex="-1"></a>Xbeta_high <span class="ot">&lt;-</span> S_4 <span class="sc">%*%</span> <span class="fu">t</span>(scenario_high)</span>
+<span id="cb11-26"><a href="#cb11-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-27"><a href="#cb11-27" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate predicted probabilities</span></span>
+<span id="cb11-28"><a href="#cb11-28" aria-hidden="true" tabindex="-1"></a>pred_prob_low <span class="ot">&lt;-</span> (<span class="fu">exp</span>(Xbeta_low)) <span class="sc">/</span> (<span class="dv">1</span> <span class="sc">+</span> <span class="fu">exp</span>(Xbeta_low))</span>
+<span id="cb11-29"><a href="#cb11-29" aria-hidden="true" tabindex="-1"></a>pred_prob_high <span class="ot">&lt;-</span> (<span class="fu">exp</span>(Xbeta_high)) <span class="sc">/</span> (<span class="dv">1</span> <span class="sc">+</span> <span class="fu">exp</span>(Xbeta_high))</span>
+<span id="cb11-30"><a href="#cb11-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-31"><a href="#cb11-31" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate first differences</span></span>
+<span id="cb11-32"><a href="#cb11-32" aria-hidden="true" tabindex="-1"></a>FD <span class="ot">&lt;-</span> pred_prob_high <span class="sc">-</span> pred_prob_low</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="cell">
+<details class="code-fold">
+<summary>Show the code</summary>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">"data/prepared_data.RData"</span>)  <span class="co"># Load prepared data</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">"data/regression_models.RData"</span>)  <span class="co"># Load fitted models</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">"data/simulation_results.RData"</span>)  <span class="co"># Load simulation results</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Predicted probabilities plot</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> auth_values, <span class="at">y =</span> <span class="fu">apply</span>(pred_prob_low, <span class="dv">2</span>, mean), <span class="at">color =</span> <span class="st">"Pro-Immigration"</span>)) <span class="sc">+</span></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_ribbon</span>(<span class="fu">aes</span>(<span class="at">x =</span> auth_values, </span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>                  <span class="at">ymin =</span> <span class="fu">apply</span>(pred_prob_low, <span class="dv">2</span>, quantile, <span class="at">probs =</span> <span class="fl">0.025</span>),</span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>                  <span class="at">ymax =</span> <span class="fu">apply</span>(pred_prob_low, <span class="dv">2</span>, quantile, <span class="at">probs =</span> <span class="fl">0.975</span>),</span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>                  <span class="at">fill =</span> <span class="st">"Pro-Immigration"</span>), <span class="at">alpha =</span> <span class="fl">0.2</span>) <span class="sc">+</span></span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> auth_values, <span class="at">y =</span> <span class="fu">apply</span>(pred_prob_high, <span class="dv">2</span>, mean), <span class="at">color =</span> <span class="st">"Anti-Immigration"</span>)) <span class="sc">+</span></span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_ribbon</span>(<span class="fu">aes</span>(<span class="at">x =</span> auth_values, </span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a>                  <span class="at">ymin =</span> <span class="fu">apply</span>(pred_prob_high, <span class="dv">2</span>, quantile, <span class="at">probs =</span> <span class="fl">0.025</span>),</span>
+<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a>                  <span class="at">ymax =</span> <span class="fu">apply</span>(pred_prob_high, <span class="dv">2</span>, quantile, <span class="at">probs =</span> <span class="fl">0.975</span>),</span>
+<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a>                  <span class="at">fill =</span> <span class="st">"Anti-Immigration"</span>), <span class="at">alpha =</span> <span class="fl">0.2</span>) <span class="sc">+</span></span>
+<span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_viridis</span>(<span class="at">discrete =</span> <span class="cn">TRUE</span>, <span class="at">begin =</span> <span class="fl">0.3</span>, <span class="at">end =</span> <span class="fl">0.7</span>) <span class="sc">+</span></span>
+<span id="cb12-18"><a href="#cb12-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_viridis</span>(<span class="at">discrete =</span> <span class="cn">TRUE</span>, <span class="at">begin =</span> <span class="fl">0.3</span>, <span class="at">end =</span> <span class="fl">0.7</span>) <span class="sc">+</span></span>
+<span id="cb12-19"><a href="#cb12-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Predicted Probabilities for voting Leave"</span>,</span>
+<span id="cb12-20"><a href="#cb12-20" aria-hidden="true" tabindex="-1"></a>       <span class="at">subtitle =</span> <span class="st">"Interacting immigration attitude and authoritarianism"</span>,</span>
+<span id="cb12-21"><a href="#cb12-21" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Authoritarianism"</span>,</span>
+<span id="cb12-22"><a href="#cb12-22" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Predicted Probability of voting for Leave"</span>,</span>
+<span id="cb12-23"><a href="#cb12-23" aria-hidden="true" tabindex="-1"></a>       <span class="at">color =</span> <span class="st">"Immigration Attitude"</span>,</span>
+<span id="cb12-24"><a href="#cb12-24" aria-hidden="true" tabindex="-1"></a>       <span class="at">fill =</span> <span class="st">"Immigration Attitude"</span>) <span class="sc">+</span></span>
+<span id="cb12-25"><a href="#cb12-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Finished-Report_files/figure-html/predicted-probabilities-1.png" class="img-fluid figure-img" width="672"></p>
+<figcaption>Predicted Probabilities for Voting Leave</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Figure 2 shows the predicted probabilities of voting “Leave” for two different simulated scenarios of attitudes towards immigration. We compare the predicted probabilities of (1) pro-immigration attitudes, based on the 25th percentile of immigration attitudes and (2) anti-immigration attitudes, based on the 75th percentile of immigration attitudes as authoritarianism varies.</p>
+<p>The chosen scenarios include all other covariates from Model 3 set to their mean or median and a sequence of values for authoritarianism from its minimum to its maximum. In this scenario, the household income is set to medium, as the median/mean gross household income is included in this category.</p>
+<p>As already indicated by the positive coefficients for the main independent variables in Table 2, more anti-immigrant attitudes predict a higher likelihood of voting for Leave. As seen, the lines showing the predicted probabilities are converging for higher values of authoritarianism, meaning that the size of the effect of immigration attitudes on voting for Leave is conditional on authoritarianism. However, the confidence intervals are not overlapping even for the highest values of authoritarianism, meaning that there still is a small effect there.</p>
+<p>Additionally, this plot illustrates well that the model expects an extremely low probability for people with pro-immigration attitudes and low levels to vote for Leave.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Show the code</summary>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># First differences plot</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x =</span> auth_values, <span class="at">y =</span> <span class="fu">apply</span>(FD, <span class="dv">2</span>, mean)), <span class="at">color =</span> <span class="fu">viridis</span>(<span class="dv">1</span>)) <span class="sc">+</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_ribbon</span>(<span class="fu">aes</span>(<span class="at">x =</span> auth_values, </span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>                  <span class="at">ymin =</span> <span class="fu">apply</span>(FD, <span class="dv">2</span>, quantile, <span class="at">probs =</span> <span class="fl">0.025</span>),</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>                  <span class="at">ymax =</span> <span class="fu">apply</span>(FD, <span class="dv">2</span>, quantile, <span class="at">probs =</span> <span class="fl">0.975</span>)),</span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>              <span class="at">fill =</span> <span class="fu">viridis</span>(<span class="dv">1</span>), <span class="at">alpha =</span> <span class="fl">0.2</span>) <span class="sc">+</span></span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"First Differences in Predicted Probabilities"</span>,</span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>       <span class="at">subtitle =</span> <span class="st">"Effect of changing from Pro- to Anti-Immigration attitudes"</span>,</span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Authoritarianism"</span>,</span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"First Difference in Predicted Probability"</span>) <span class="sc">+</span></span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Finished-Report_files/figure-html/first-differences-1.png" class="img-fluid figure-img" width="672"></p>
+<figcaption>First Differences in Predicted Probabilities</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>In Figure 3, we plot the first difference for these two specified scenarios. The plotted first differences show a downward trend but are consistently positive for all levels of authoritarianism. This means that across all levels of authoritarianism, more negative views about immigration lead to a higher probability of voting for Brexit.</p>
+<p>However, these differences become continuously smaller for higher levels of authoritarianism. This supports the hypothesis that the effect of Anti-Immigration Attitudes is moderated by respondents’ level of authoritarianism. However, the moderating effect only starts to become substantively important around levels 4 to 5 of authoritarianism, as the line for the first differences remains close to flat before.</p>
+</section>
+<section id="model-evaluation" class="level2">
+<h2 class="anchored" data-anchor-id="model-evaluation">Model Evaluation</h2>
+<div class="cell">
+<details class="code-fold">
+<summary>Show the code</summary>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Separation plots</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(separationplot)</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Separation plot for Model 1</span></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="fu">separationplot</span>(</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">pred =</span> model1<span class="sc">$</span>fitted,</span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">actual =</span> <span class="fu">as.vector</span>(model2<span class="sc">$</span>model<span class="sc">$</span>p_eurefvote),</span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">line =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">heading =</span> <span class="st">"Model 1"</span>,</span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">show.expected =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">height =</span> <span class="dv">1</span>,</span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>  <span class="at">col0 =</span> <span class="fu">viridis</span>(<span class="dv">2</span>)[<span class="dv">2</span>],</span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a>  <span class="at">col1 =</span> <span class="fu">viridis</span>(<span class="dv">2</span>)[<span class="dv">1</span>],</span>
+<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a>  <span class="at">lwd2 =</span> <span class="dv">2</span>,</span>
+<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a>  <span class="at">newplot =</span> <span class="cn">FALSE</span></span>
+<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Finished-Report_files/figure-html/separation-plots-1.png" class="img-fluid figure-img" width="672"></p>
+<figcaption>Separation Plots for Model Evaluation</figcaption>
+</figure>
+</div>
+</div>
+<details class="code-fold">
+<summary>Show the code</summary>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Separation plot for Model 3</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="fu">separationplot</span>(</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">pred =</span> model3<span class="sc">$</span>fitted,</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">actual =</span> <span class="fu">as.vector</span>(model3<span class="sc">$</span>model<span class="sc">$</span>p_eurefvote),</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">line =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">heading =</span> <span class="st">"Model 3"</span>,</span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">show.expected =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">height =</span> <span class="dv">1</span>,</span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">col0 =</span> <span class="fu">viridis</span>(<span class="dv">2</span>)[<span class="dv">2</span>],</span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">col1 =</span> <span class="fu">viridis</span>(<span class="dv">2</span>)[<span class="dv">1</span>],</span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">lwd2 =</span> <span class="dv">2</span>,</span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>  <span class="at">newplot =</span> <span class="cn">FALSE</span></span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Finished-Report_files/figure-html/separation-plots-2.png" class="img-fluid figure-img" width="672"></p>
+<figcaption>Separation Plots for Model Evaluation</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>As an additional evaluation of model fit, we use the Separation plot method by <span class="citation" data-cites="greenhill_ward_sacks_2011">Greenhill, Ward, and Sacks (<a href="#ref-greenhill_ward_sacks_2011" role="doc-biblioref">2011</a>)</span> that shows a visualization to evaluate models based on their ability to “consistently match high-probability predictions to actual occurrences of the event of interest, and low-probability predictions to nonoccurrences of the event of interest” (Greenhill et al.&nbsp;2011: 990).</p>
+<p>In these plots yellow lines are displaying 0s and purple lines are displaying 1s. In a perfect model yellow (for non-events) and purple lines (for events) would be perfectly separated from each other. This is not the case for our models, but we see a clear tendency that with higher predicted probabilities (on the x-axis: going from left to right), the occurrence of purple lines increases. The separation plots between the models look similar, with only marginal differences in the distinction between non-events and events. The marker on the bottom of the figure represents the expected number of total events predicted by the model (sum of predicted probabilities across all observations).</p>
+</section>
+</section>
+<section id="discussion" class="level1">
+<h1>Discussion</h1>
+<p>Our findings support the hypothesis that anti-immigration attitudes predict a higher likelihood of voting for Brexit. However, the moderating effect of authoritarianism is more complex than initially anticipated. While both anti-immigration attitudes and authoritarianism independently increase the likelihood of a Leave vote, their interaction suggests that the impact of immigration attitudes is strongest among those with lower levels of authoritarianism.</p>
+<p>This unexpected result may be explained by the fact that highly authoritarian individuals are already more likely to vote Leave regardless of their specific views on immigration. In contrast, for less authoritarian individuals, their stance on immigration plays a more decisive role in shaping their Brexit vote.</p>
+</section>
+<section id="limitations-and-future-research" class="level1">
+<h1>Limitations and Future Research</h1>
+<p>Several limitations of this study should be noted. First, our analysis is based on cross-sectional data, which limits our ability to establish causal relationships. Future research could benefit from longitudinal data to examine how attitudes evolved over time leading up to the referendum.</p>
+<p>Second, while we control for several demographic factors, there may be other important variables not included in our model, such as education level or exposure to EU-related information.</p>
+<p>Lastly, our measure of authoritarianism, while standard in the field, may not capture all aspects of this complex construct. Future studies could explore alternative measures or incorporate related concepts like social dominance orientation.</p>
+<p>Furthermore, additional robustness checks such as other thresholds for the grouping of household incomes would have been beneficial.</p>
+</section>
+<section id="conclusion" class="level1">
+<h1>Conclusion</h1>
+<p>The evidence presented in this paper shows that attitudes towards immigration indeed predict Brexit vote, with the effect being higher for respondents with lower values on the authoritarianism scale. This effect remains consistent with the inclusion of further control variables into the regression model and is not sensitive to a different specification of the independent variable immigration attitudes with a variable that captures preferences for immigration (more or less immigration).</p>
+<p>One limitation of this study is that it only examined the relationship between anti-immigration attitudes and likelihood of a Brexit vote and did not explore other potential factors that may have influenced individuals’ voting decisions. Further research could investigate these other factors and how they interact with anti-immigration attitudes and authoritarianism to influence the voting behavior, such as educational attainment, which we assume to be a confounder for both anti-immigration attitudes and the Brexit vote.</p>
+<p>Additionally, it would be interesting to explore whether the relationship between anti-immigration attitudes, and the interaction with levels of authoritarianism still matter for support of the Brexit policies in the current political climate.</p>
+</section>
+<section id="references" class="level1">
+<h1>References</h1>
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-altemeyer_1981" class="csl-entry" role="listitem">
+Altemeyer, Bob. 1981. <em>Right-Wing Authoritarianism</em>. University of Manitoba Press.
+</div>
+<div id="ref-colantone_stanig_2018" class="csl-entry" role="listitem">
+Colantone, Italo, and Piero Stanig. 2018. <span>“Global Competition and Brexit.”</span> <em>American Political Science Review</em> 112(2): 201–18.
+</div>
+<div id="ref-goodwin_milazzo_2017" class="csl-entry" role="listitem">
+Goodwin, Matthew J, and Caitlin Milazzo. 2017. <span>“Taking Back Control? Investigating the Role of Immigration in the 2016 Vote for Brexit.”</span> <em>The British Journal of Politics and International Relations</em> 19(3): 450–64.
+</div>
+<div id="ref-greenhill_ward_sacks_2011" class="csl-entry" role="listitem">
+Greenhill, Brian, Michael D Ward, and Audrey Sacks. 2011. <span>“The Separation Plot: A New Visual Method for Evaluating the Fit of Binary Models.”</span> <em>American Journal of Political Science</em> 55(4): 991–1002.
+</div>
+<div id="ref-king_tomz_wittenberg_2000" class="csl-entry" role="listitem">
+King, Gary, Michael Tomz, and Jason Wittenberg. 2000. <span>“Making the Most of Statistical Analyses: Improving Interpretation and Presentation.”</span> <em>American Journal of Political Science</em>: 347–61.
+</div>
+<div id="ref-norris_inglehart_2019" class="csl-entry" role="listitem">
+Norris, Pippa, and Ronald Inglehart. 2019. <em>Cultural Backlash: Trump, Brexit, and Authoritarian Populism</em>. Cambridge University Press.
+</div>
+<div id="ref-stenner_2005" class="csl-entry" role="listitem">
+Stenner, Karen. 2005. <em>The Authoritarian Dynamic</em>. Cambridge University Press.
+</div>
+</div>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
