@@ -2,7 +2,10 @@
 # Brexit Vote Analysis: Immigration Attitudes and Authoritarianism
 
 
-[Brexit Vote Analysis Report](https://htmlpreview.github.io/?https://github.com/Jannik-Hoffmann/Brexit-Data-Analysis/blob/main/Finished%20Report.html)
+## Report
+
+You can view the full report here: [Brexit Vote Analysis Report](https://htmlpreview.github.io/?https://github.com/Jannik-Hoffmann/Brexit-Data-Analysis/blob/main/Finished%20Report.html)
+
 ## Overview
 
 This project analyzes the determinants of the Brexit vote, focusing on the relationship between attitudes towards immigration, levels of authoritarianism, and the likelihood of voting to leave the European Union. Using data from the 15th wave of the British Election Study, this analysis employs advanced statistical techniques to explore how these factors influenced voting behavior in the 2016 EU referendum.
