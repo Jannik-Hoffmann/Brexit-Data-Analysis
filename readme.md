@@ -30,6 +30,7 @@ brexit-analysis/
 │
 ├── output/
 │
+├── data/
 ├── scripts/
 │   ├── 01_setup.R
 │   ├── 02_data_preparation.R
