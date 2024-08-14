@@ -1,6 +1,9 @@
 
 # Brexit Vote Analysis: Immigration Attitudes and Authoritarianism
 
+
+For the full report, see the interactive quarto page ![Finished Report.html]
+
 ## Overview
 
 This project analyzes the determinants of the Brexit vote, focusing on the relationship between attitudes towards immigration, levels of authoritarianism, and the likelihood of voting to leave the European Union. Using data from the 15th wave of the British Election Study, this analysis employs advanced statistical techniques to explore how these factors influenced voting behavior in the 2016 EU referendum.
