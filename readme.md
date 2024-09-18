@@ -81,7 +81,7 @@ brexit-analysis/
 
 ## Insights and Implications
 
-Our analysis reveals key insights into the Brexit vote:
+My analysis reveals key insights into the Brexit vote:
 
 1. **Immigration Attitudes Matter**: Anti-immigration sentiments strongly predicted Brexit support, confirming the importance of this issue in the referendum.
 
@@ -89,7 +89,7 @@ Our analysis reveals key insights into the Brexit vote:
 
 3. **Complex Interaction**: The effect of immigration attitudes on Brexit support was strongest among those low in authoritarianism. For high authoritarians, Brexit support was high regardless of immigration views.
 
-4. **Beyond Simple Narratives**: Our findings challenge one-dimensional explanations of Brexit, revealing a complex interplay between policy attitudes and psychological factors.
+4. **Beyond Simple Narratives**: The findings challenge one-dimensional explanations of Brexit, revealing a significant interplay between policy attitudes and psychological factors.
 
 5. **Future Political Implications**: This interaction between policy views and underlying psychological traits may help explain other populist movements globally.
 
